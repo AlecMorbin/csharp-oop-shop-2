@@ -9,16 +9,14 @@ namespace CSharp_Shop_2
     internal class Aqcua : Prodotto
     {
         //Attributi
-        private string sorgente;
-        private int ph;
+        private readonly string sorgente = "Monte Cervino";
+        private readonly float ph = 1.2f;
         private float quantity;
 
         //Costruttore
-        public Aqcua(string nome, string descrizione, float prezzo, float iva, float quantity, string sorgente, int ph) : base(nome, descrizione, prezzo, iva)
+        public Aqcua(string nome, string descrizione, float prezzo, float iva, float quantity) : base(nome, descrizione, prezzo, iva)
         {
-            this.quantity = quantity;
-            this.sorgente = sorgente;
-            this.ph = ph;
+            setQuantity( quantity);
         }
 
         //Metodi di accesso
@@ -26,25 +24,22 @@ namespace CSharp_Shop_2
         {
             return sorgente;
         }
-        public void setSorgente(string source)
-        {
-            this.sorgente = source;
-        }
-        public  int getPh()
+
+        public float getPh()
         {
             return ph;
         }
-        public void setPh(int ph)
-        {
-            this.ph = ph;
-        }
+
         public float getQuantity()
         {
             return quantity;
         }
         public void setQuantity(float quantity)
         {
-            this.quantity = quantity;
+            if (quantity > 1.5)
+                this.quantity = 1.5f;
+            else
+                this.quantity = quantity;
         }
 
         //Metodi utili
@@ -62,9 +57,9 @@ namespace CSharp_Shop_2
         {
             quantity = 0;
         }
-        public string ToString()
+        public override string ToString()
         {
-            return base.ToString() + "\nSorgente: "+sorgente+"\nQuantità: "+quantity+"\nPH: "+ph;
+            return base.ToString() + "Sorgente: "+sorgente+"\nQuantità: "+quantity+"\nPH: "+ph;
         }
     }
 }
