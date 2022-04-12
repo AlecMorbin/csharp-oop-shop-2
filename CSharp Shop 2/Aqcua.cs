@@ -12,6 +12,7 @@ namespace CSharp_Shop_2
         private readonly string sorgente = "Monte Cervino";
         private readonly float ph = 1.2f;
         private float quantity;
+        private static float indiceConversioneGalloni = 3.785f;
 
         //Costruttore
         public Aqcua(string nome, string descrizione, float prezzo, float iva, float quantity) : base(nome, descrizione, prezzo, iva)
@@ -64,6 +65,10 @@ namespace CSharp_Shop_2
         {
             quantity = 0;
             Console.WriteLine("La bottiglia è stata svuotata");
+        }
+        public void convertiGalloni()
+        {
+            Console.WriteLine("la Quantità in Galloni presente nella bottiglia è: " + quantity/indiceConversioneGalloni );
         }
         public override string ToString()
         {

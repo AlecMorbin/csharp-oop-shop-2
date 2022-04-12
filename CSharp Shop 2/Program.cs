@@ -17,3 +17,5 @@ Console.WriteLine(acqua.getQuantity());
 acqua.riempi(1.6f);
 acqua.riempi(1.5f);
 
+
+acqua.convertiGalloni();
