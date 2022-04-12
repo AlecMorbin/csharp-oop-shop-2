@@ -45,17 +45,25 @@ namespace CSharp_Shop_2
         //Metodi utili
         public void bevi(float amount)
         {
-            if (quantity >= amount )
+            if (quantity >= amount)
                 quantity -= amount;
+            else
+                Console.WriteLine("Non c'è abbastanza acqua per te");
         }
         public void riempi(float amount)
         {
-            if(amount <= quantity)
+            if(amount <= 1.5)
+            {
                 quantity += amount;
+                Console.WriteLine("La bottiglia è stata riempita della quantità desiderata");
+            }
+            else
+                Console.WriteLine("Hai usato troppa acqua e sei andato oltre il limite\nLa bottiglia non può contenere cosi tanta acqua");
         }
         public void svuota()
         {
             quantity = 0;
+            Console.WriteLine("La bottiglia è stata svuotata");
         }
         public override string ToString()
         {
