@@ -19,3 +19,13 @@ acqua.riempi(1.5f);
 
 
 acqua.convertiGalloni();
+
+SacchetoFrutta saccheto = new SacchetoFrutta("Spesa", "Dal fruttivendolo", 3.4f, 0.4f);
+
+saccheto.inserisciFrutta("mela");
+saccheto.inserisciFrutta("mela");
+saccheto.inserisciFrutta("mela");
+saccheto.inserisciFrutta("mela");
+saccheto.inserisciFrutta("mela");
+
+Console.WriteLine(saccheto.getPezzi());
