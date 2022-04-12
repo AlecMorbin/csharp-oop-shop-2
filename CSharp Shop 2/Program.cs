@@ -23,9 +23,17 @@ acqua.convertiGalloni();
 SacchetoFrutta saccheto = new SacchetoFrutta("Spesa", "Dal fruttivendolo", 3.4f, 0.4f);
 
 saccheto.inserisciFrutta("mela");
-saccheto.inserisciFrutta("mela");
-saccheto.inserisciFrutta("mela");
-saccheto.inserisciFrutta("mela");
-saccheto.inserisciFrutta("mela");
+saccheto.inserisciFrutta("pera");
+saccheto.inserisciFrutta("uva");
+saccheto.inserisciFrutta("fragole");
+saccheto.inserisciFrutta("uvetta");
+
+Console.WriteLine(saccheto.getPezzi());
+
+saccheto.rimuoviFrutto("mela");
+
+Console.WriteLine(saccheto.getPezzi());
+
+saccheto.rimuoviFrutto("kiwi");
 
 Console.WriteLine(saccheto.getPezzi());
