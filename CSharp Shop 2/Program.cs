@@ -14,7 +14,13 @@ acqua.svuota();
 
 Console.WriteLine(acqua.getQuantity());
 
-acqua.riempi(1.6f);
+try
+{
+    acqua.riempi(1.6f);
+}catch(Exception e)
+{
+    Console.WriteLine(e.Message);
+}
 acqua.riempi(1.5f);
 
 

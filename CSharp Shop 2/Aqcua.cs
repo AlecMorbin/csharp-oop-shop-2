@@ -59,7 +59,9 @@ namespace CSharp_Shop_2
                 Console.WriteLine("La bottiglia è stata riempita della quantità desiderata");
             }
             else
-                Console.WriteLine("Hai usato troppa acqua e sei andato oltre il limite\nLa bottiglia non può contenere cosi tanta acqua");
+            {
+                throw new Exception("Hai usato troppa acqua e sei andato oltre il limite\nLa bottiglia non può contenere cosi tanta acqua");
+            }
         }
         public void svuota()
         {
